@@ -13,15 +13,15 @@
     <div class="base-navbar">
       <img class="navbar-logo" src="{% static 'logo.png' %}" />
       <div class="navbar-dropdown">
-        <a>NFL</a>
+        <a class="league" href="{% url 'nfl_index' %}">NFL</a>
         <div class="dropdown">
           <div class="dropdown-content">
             <div class="dropdown-links">
               <div class="dropdown-link-container">
-                <a class="dropdown-link">Home</a>
+                <a class="dropdown-link" href="{% url 'nfl_index' %}">Home</a>
               </div>
               <div class="dropdown-link-container">
-                <a class="dropdown-link" href={% url 'nfl_teams' %}>Teams</a>
+                <a class="dropdown-link" href="{% url 'nfl_teams' %}">Teams</a>
               </div>
               <div class="dropdown-link-container">
                 <a class="dropdown-link">Schedule</a>
@@ -34,9 +34,9 @@
                   <h3>NFC East</h3>
                   {% for team in nfc_east_teams %}
                   <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                       <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                        <img class="dropdown-team-logo" src="{% static team_logo_img %}"/>
                       </div>
                     {% endwith %}
                     {{team.name}}
@@ -144,6 +144,6 @@
       </div>
     </div>
 
-    <main class="container">{% block content %} {% endblock %}</main>
+    <main class="content">{% block content %} {% endblock %}</main>
   </body>
 </html>

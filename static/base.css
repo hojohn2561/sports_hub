@@ -12,6 +12,10 @@
   padding: 0.5rem 1rem;
 }
 
+.content {
+  margin: 5rem 15rem;
+}
+
 .conference {
   display: flex;
   flex-direction: row;
@@ -95,6 +99,12 @@
   width: 0.1rem;
 }
 
+.league {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .navbar-dropdown {
   position: relative;
 }
@@ -119,3 +129,4 @@
   height: 2.25rem;
   margin-right: 5rem;
 }
+

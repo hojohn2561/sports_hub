@@ -1,0 +1,56 @@
+.division {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-card {
+    height: 15rem;
+    width: 40rem;
+    margin: 1rem;
+}
+
+.team-card a {
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.team-card .team-card-header {
+    align-items: center;
+    border-style: solid;
+    border-width: 2px 2px 0 2px;
+    border-color: lightgrey;
+    border-radius: 1rem 1rem 0 0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    padding: 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  
+}
+
+.team-card .team-card-body {
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-style: solid;
+    border-width: 0 2px 2px 2px;
+    border-color: lightgrey;
+    border-radius: 0 0 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    height: 30%;
+    padding: 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.team-logo-img {
+    object-fit: contain;
+    width: 17%;
+    margin-right: 1rem;
+}
