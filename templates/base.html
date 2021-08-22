@@ -1,0 +1,149 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+    <title>Sports Hub</title>
+  </head>
+  <body class="app-base">
+    <div class="base-navbar">
+      <img class="navbar-logo" src="{% static 'logo.png' %}" />
+      <div class="navbar-dropdown">
+        <a>NFL</a>
+        <div class="dropdown">
+          <div class="dropdown-content">
+            <div class="dropdown-links">
+              <div class="dropdown-link-container">
+                <a class="dropdown-link">Home</a>
+              </div>
+              <div class="dropdown-link-container">
+                <a class="dropdown-link" href={% url 'nfl_teams' %}>Teams</a>
+              </div>
+              <div class="dropdown-link-container">
+                <a class="dropdown-link">Schedule</a>
+              </div>
+            </div>
+            <span id="hr"></span>
+            <div class="dropdown-teams">
+              <div class="conference">
+                <div class="division">
+                  <h3>NFC East</h3>
+                  {% for team in nfc_east_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="division">
+                  <h3>NFC West</h3>
+                  {% for team in nfc_west_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="division">
+                  <h3>NFC North</h3>
+                  {% for team in nfc_north_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="division">
+                  <h3>NFC South</h3>
+                  {% for team in nfc_south_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <div class="conference">
+                <div class="division">
+                  <h3>AFC East</h3>
+                  {% for team in afc_east_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="division">
+                  <h3>AFC West</h3>
+                  {% for team in afc_west_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="division">
+                  <h3>AFC North</h3>
+                  {% for team in afc_north_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+                <div class="division">
+                  <h3>AFC South</h3>
+                  {% for team in afc_south_teams %}
+                  <div class="team">
+                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                      <div class="dropdown-team-logo-container">
+                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                      </div>
+                    {% endwith %}
+                    {{team.name}}
+                  </div>
+                  {% endfor %}
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="container">{% block content %} {% endblock %}</main>
+  </body>
+</html>
