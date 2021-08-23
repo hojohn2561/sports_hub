@@ -1,5 +1,6 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
+from .models import Team
 
 
 # The business logic of handling the requests is done by Django Views, it is their purpose.
@@ -12,3 +13,16 @@ def index(request):
 
 def teams(request):
     return render(request, "nfl/teams.html")
+
+
+def schedule(request):
+    return render(request, "nfl/schedule.html")
+
+
+def standings(request):
+    return render(request, "nfl/standings.html")
+
+
+def team(request, team_id):
+    team = get_object_or_404(Team, pk=team_id)
+    return render(request, "nfl/team.html", {'team': team})

@@ -30,6 +30,11 @@
   margin-bottom: 0;
 }
 
+.division a {
+  color: white;
+  text-decoration: none;
+}
+
 .division .team {
   display: flex;
   flex-direction: row;
@@ -116,12 +121,12 @@
   max-height: 0;
   width: 45rem;
   overflow: hidden;
-  transition: all 0.75s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .navbar-dropdown:hover .dropdown {
   max-height: 1000rem; /* Value dropdown will never reach*/
-  transition: all 1.5s ease-in;
+  transition: all 1s ease-in;
 }
 
 .navbar-logo {

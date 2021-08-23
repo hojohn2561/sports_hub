@@ -24,7 +24,10 @@
                 <a class="dropdown-link" href="{% url 'nfl_teams' %}">Teams</a>
               </div>
               <div class="dropdown-link-container">
-                <a class="dropdown-link">Schedule</a>
+                <a class="dropdown-link" href="{% url 'nfl_schedule' %}">Schedule</a>
+              </div>
+              <div class="dropdown-link-container">
+                <a class="dropdown-link" href="{% url 'nfl_standings' %}">Standings</a>
               </div>
             </div>
             <span id="hr"></span>
@@ -33,53 +36,61 @@
                 <div class="division">
                   <h3>NFC East</h3>
                   {% for team in nfc_east_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static team_logo_img %}"/>
-                      </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                  <a href="{% url 'nfl_team' team.id %}">
+                    <div class="team">
+                      {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
+                        <div class="dropdown-team-logo-container">
+                          <img class="dropdown-team-logo" src="{% static team_logo_img %}"/>
+                        </div>
+                      {% endwith %}
+                      {{team.name}}
+                    </div>
+                  </a>
                   {% endfor %}
                 </div>
                 <div class="division">
                   <h3>NFC West</h3>
                   {% for team in nfc_west_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                    <a href="{% url 'nfl_team' team.id %}"> 
+                      <div class="team">
+                        {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                          <div class="dropdown-team-logo-container">
+                            <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                          </div>
+                        {% endwith %}
+                        {{team.name}}
                       </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                    </a>
                   {% endfor %}
                 </div>
                 <div class="division">
                   <h3>NFC North</h3>
                   {% for team in nfc_north_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
-                      </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                  <a href="{% url 'nfl_team' team.id %}">
+                    <div class="team">
+                      {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                        <div class="dropdown-team-logo-container">
+                          <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                        </div>
+                      {% endwith %}
+                      {{team.name}}
+                    </div>
+                  </a>
                   {% endfor %}
                 </div>
                 <div class="division">
                   <h3>NFC South</h3>
                   {% for team in nfc_south_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
-                      </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                  <a href="{% url 'nfl_team' team.id %}">
+                    <div class="team">
+                      {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                        <div class="dropdown-team-logo-container">
+                          <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                        </div>
+                      {% endwith %}
+                      {{team.name}}
+                    </div>
+                  </a>
                   {% endfor %}
                 </div>
               </div>
@@ -87,53 +98,61 @@
                 <div class="division">
                   <h3>AFC East</h3>
                   {% for team in afc_east_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
-                      </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                  <a href="{% url 'nfl_team' team.id %}">
+                    <div class="team">
+                      {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                        <div class="dropdown-team-logo-container">
+                          <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                        </div>
+                      {% endwith %}
+                      {{team.name}}
+                    </div>
+                  </a>
                   {% endfor %}
                 </div>
                 <div class="division">
                   <h3>AFC West</h3>
                   {% for team in afc_west_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
-                      </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                  <a href="{% url 'nfl_team' team.id %}">
+                    <div class="team">
+                      {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                        <div class="dropdown-team-logo-container">
+                          <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                        </div>
+                      {% endwith %}
+                      {{team.name}}
+                    </div>
+                  </a>
                   {% endfor %}
                 </div>
                 <div class="division">
                   <h3>AFC North</h3>
                   {% for team in afc_north_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
-                      </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                  <a href="{% url 'nfl_team' team.id %}">
+                    <div class="team">
+                      {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                        <div class="dropdown-team-logo-container">
+                          <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                        </div>
+                      {% endwith %}
+                      {{team.name}}
+                    </div>
+                  </a>
                   {% endfor %}
                 </div>
                 <div class="division">
                   <h3>AFC South</h3>
                   {% for team in afc_south_teams %}
-                  <div class="team">
-                    {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
-                      <div class="dropdown-team-logo-container">
-                        <img class="dropdown-team-logo" src="{% static image_static %}"/>
-                      </div>
-                    {% endwith %}
-                    {{team.name}}
-                  </div>
+                  <a href="{% url 'nfl_team' team.id %}">
+                    <div class="team">
+                      {% with 'nfl/logos/'|add:team.name|add:'.png' as image_static %}
+                        <div class="dropdown-team-logo-container">
+                          <img class="dropdown-team-logo" src="{% static image_static %}"/>
+                        </div>
+                      {% endwith %}
+                      {{team.name}}
+                    </div>
+                  </a>
                   {% endfor %}
                 </div>
 
