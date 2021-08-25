@@ -30,18 +30,17 @@
   margin-bottom: 0;
 }
 
-.division a {
+.division .team-link {
   color: white;
   text-decoration: none;
 }
 
 .division .team {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  padding: 0.25rem 0;
-  width: 10rem;
   height: 1.5rem;
-  align-items: center;
+  width: 10rem;
 }
 
 .division .team:hover {
@@ -90,13 +89,13 @@
 
 
 .dropdown-team-logo-container {
-  width: 3rem;
+  width: 2.25rem;
 }
 
 .dropdown-team-logo {
   object-fit: contain;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 #hr {
@@ -132,6 +131,6 @@
 .navbar-logo {
   cursor: pointer;
   height: 2.25rem;
-  margin-right: 5rem;
+  margin-right: 3rem;
 }
 

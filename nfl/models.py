@@ -1,6 +1,10 @@
 from django.db import models
 from colorfield.fields import ColorField
 
+# Models are Python classes that represent objects in the database
+# A model is the single, definitive source of information about your data. It contains the essential
+# fields and behaviors of the data you’re storing. Generally, each model maps to a single database table.
+
 
 class Team(models.Model):
     city = models.CharField(max_length=50)

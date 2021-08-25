@@ -11,14 +11,10 @@
 
 .team-card {
     height: 10rem;
-    width: 38rem;
+    width: 36rem;
     margin: .5rem;
 }
 
-.team-card a {
-    margin-right: 1rem;
-    text-decoration: none;
-}
 
 .team-card .team-card-header {
     align-items: center;
@@ -54,6 +50,11 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.team-card-body a  {
+    margin-right: 1rem;
+    text-decoration: none;
 }
 
 .team-logo-img {
