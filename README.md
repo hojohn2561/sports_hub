@@ -9,7 +9,9 @@ This web scraping application offers stats, highlights, and scores for sporting 
 ## Dependecies
 - [Python 3.8.5](https://www.python.org/downloads/)
 - [pipenv](https://pipenv.pypa.io/en/latest/)
-- [django-colorfield](https://pypi.org/project/django-colorfield/)
+- [django-colorfield](https://pypi.org/project/django-colorfield/)- So teams can have primary/secondary/tertiary color attributes
+- [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)- To scrape information from web pages
+- [requests](https://pypi.org/project/requests/)- For making HTTP requests to get page's HTML data
 
 ## Contributors
 - [John Ho](https://github.com/hojohn2561)
