@@ -1,8 +1,9 @@
-.division {
+.division-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2.5rem;
 }
 
 .division-header {
@@ -11,8 +12,8 @@
 
 .team-card {
     height: 10rem;
-    width: 36rem;
     margin: .5rem;
+    width: 35rem;
 }
 
 
@@ -38,7 +39,7 @@
 
 .team-card .team-card-body {
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-style: solid;
     border-width: 0 2px 2px 2px;
     border-color: lightgrey;
@@ -53,12 +54,13 @@
 }
 
 .team-card-body a  {
+    color: blue;
     margin-right: 1rem;
     text-decoration: none;
 }
 
 .team-logo-img {
+    margin-right: 1rem;
     object-fit: contain;
     width: 15%;
-    margin-right: 1rem;
 }

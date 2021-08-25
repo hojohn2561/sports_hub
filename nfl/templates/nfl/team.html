@@ -1,7 +1,23 @@
 {% extends 'base.html' %} 
+{% load static %}
+
 
 {% block content %}
-<h1>NFL Team {{team.id}}, {{team.name}} </h1>
+<link rel="stylesheet" type="text/css" href="{% static 'team.css' %}" />
+
+<div class="team-banner-container">
+    <div class="team-banner-header">
+        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
+            <img class="team-logo-img" src="{% static team_logo_img %}"/>
+            <h1>{{team.city}} {{team.name}} </h1>
+        {% endwith %}
+    </div>  
+    <div class="team-banner-links">
+        <a href="https://twitter.com/search?q={{team.name}}%20(from%3AAdamSchefter%20OR%20from%3ARapSheet)&src=typed_query&f=live">Insider Tweets</a>
+    </div>
+</div>
+
+
 
 
 {% endblock %}

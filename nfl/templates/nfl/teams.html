@@ -5,179 +5,179 @@
 <link rel="stylesheet" type="text/css" href="{% static 'teams.css' %}" />
 
 <h1 class="division-header">NFC East</h1>
-<div class="division">
+<div class="division-container">
     {% for team in nfc_east_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 <h1 class="division-header">NFC West</h1>
-<div class="division">
+<div class="division-container">
     {% for team in nfc_west_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 <h1 class="division-header">NFC North</h1>
-<div class="division">
+<div class="division-container">
     {% for team in nfc_north_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 <h1 class="division-header">NFC South</h1>
-<div class="division">
+<div class="division-container">
     {% for team in nfc_south_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 <h1 class="division-header">AFC East</h1>
-<div class="division">
+<div class="division-container">
     {% for team in afc_east_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 <h1 class="division-header">AFC West</h1>
-<div class="division">
-    {% for team in afc_west_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+<div class="division-container">
+    {% for team in nfc_west_teams %}
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 <h1 class="division-header">AFC North</h1>
-<div class="division">
-    {% for team in afc_north_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+<div class="division-container">
+    {% for team in nfc_north_teams %}
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 <h1 class="division-header">AFC South</h1>
-<div class="division">
-    {% for team in afc_south_teams %}
-        {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
-            <div class="team-card">
+<div class="division-container">
+    {% for team in nfc_south_teams %}
+        <div class="team-card">
+            {% with 'nfl/logos/'|add:team.name|add:'.png' as team_logo_img %}
                 <div class="team-card-header" style="background-color:{{team.primary_color}}; background-image: url('{% static team_logo_img %}'); background-repeat: no-repeat; background-position: 110%; background-size: 45%">
-                        <img class="team-logo-img" src="{% static team_logo_img %}"/>
+                    <img class="team-logo-img" src="{% static team_logo_img %}"/>
                     <div>
                         <h1>{{team.city}}</h1>
                         <h1>{{team.name}}</h1>
                     </div>
                 </div>
-                <div class="team-card-body">
-                    <a href="{% url 'nfl_team' team.id %}">Team Page</a>
-                    <a href="#">Roster</a>
-                    <a href="#">Schedule</a>
-                    <a href="#">Stats</a>
-                </div>
+            {% endwith %}
+            <div class="team-card-body">
+                <a href="{% url 'nfl_team' team.id %}">Team Page</a>
+                <a href="#">Roster</a>
+                <a href="#">Schedule</a>
+                <a href="#">Stats</a>
             </div>
-        {% endwith %}
+        </div>
     {% endfor %}
 </div>
 

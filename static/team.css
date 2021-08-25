@@ -1,0 +1,16 @@
+.team-banner-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.team-banner-links a {
+    color: blue;
+    text-decoration: none;
+}
+
+.team-logo-img {
+    object-fit: contain;
+    width: 15%;
+    margin-right: 1rem;
+}
