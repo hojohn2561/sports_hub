@@ -1,33 +1,51 @@
+/* Overriding .context from base.css */
+.content {
+    margin: 0;
+}
+
 .link-icon {
     margin-right: .5rem;
+}
+
+.team-banner-container {
+    color: white;
 }
 
 .team-banner-header {
     display: flex;
     flex-direction: row;
-    margin-bottom: .5rem;
+    justify-content: center;
+    padding: 1rem 0;
 }
 
 .team-banner-link {
-    display: flex;
     align-items: center;
+    display: flex;
     height: 2rem;
     width: fit-content;
 }
 
 .team-banner-links {
+    background-color: skyblue;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: .25rem 10rem;
+
 }
 
 .team-banner-links a {
-    color: blue;
+    color: white;
     text-decoration: none;
+}
+
+.team-banner-links a:hover {
+    color: grey;
 }
 
 .team-logo-img {
     object-fit: contain;
-    width: 15%;
     margin-right: 1rem;
+    width: 14%;
 }
