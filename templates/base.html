@@ -1,6 +1,8 @@
 {% load static %}
 
 <!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -30,11 +32,10 @@
                 <a class="dropdown-link" href="{% url 'nfl_standings' %}">Standings</a>
               </div>
             </div>
-            <span id="hr"></span>
             <div class="dropdown-teams">
               <div class="conference">
                 <div class="division">
-                  <h3>NFC East</h3>
+                  <h4>NFC East</h4>
                   {% for team in nfc_east_teams %}
                   <a class="team-link" href="{% url 'nfl_team' team.id %}">
                     <div class="team">
@@ -49,7 +50,7 @@
                   {% endfor %}
                 </div>
                 <div class="division">
-                  <h3>NFC West</h3>
+                  <h4>NFC West</h4>
                   {% for team in nfc_west_teams %}
                     <a class="team-link" href="{% url 'nfl_team' team.id %}"> 
                       <div class="team">
@@ -64,7 +65,7 @@
                   {% endfor %}
                 </div>
                 <div class="division">
-                  <h3>NFC North</h3>
+                  <h4>NFC North</h4>
                   {% for team in nfc_north_teams %}
                   <a class="team-link" href="{% url 'nfl_team' team.id %}">
                     <div class="team">
@@ -79,7 +80,7 @@
                   {% endfor %}
                 </div>
                 <div class="division">
-                  <h3>NFC South</h3>
+                  <h4>NFC South</h4>
                   {% for team in nfc_south_teams %}
                   <a class="team-link" href="{% url 'nfl_team' team.id %}">
                     <div class="team">
@@ -96,7 +97,7 @@
               </div>
               <div class="conference">
                 <div class="division">
-                  <h3>AFC East</h3>
+                  <h4>AFC East</h4>
                   {% for team in afc_east_teams %}
                   <a class="team-link" href="{% url 'nfl_team' team.id %}">
                     <div class="team">
@@ -111,7 +112,7 @@
                   {% endfor %}
                 </div>
                 <div class="division">
-                  <h3>AFC West</h3>
+                  <h4>AFC West</h4>
                   {% for team in afc_west_teams %}
                   <a class="team-link" href="{% url 'nfl_team' team.id %}">
                     <div class="team">
@@ -126,7 +127,7 @@
                   {% endfor %}
                 </div>
                 <div class="division">
-                  <h3>AFC North</h3>
+                  <h4>AFC North</h4>
                   {% for team in afc_north_teams %}
                   <a class="team-link" href="{% url 'nfl_team' team.id %}">
                     <div class="team">
@@ -141,7 +142,7 @@
                   {% endfor %}
                 </div>
                 <div class="division">
-                  <h3>AFC South</h3>
+                  <h4>AFC South</h4>
                   {% for team in afc_south_teams %}
                   <a class="team-link" href="{% url 'nfl_team' team.id %}">
                     <div class="team">
@@ -164,5 +165,9 @@
     </div>
 
     <main class="content">{% block content %} {% endblock %}</main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
