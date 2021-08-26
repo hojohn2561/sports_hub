@@ -14,6 +14,9 @@ class Team(models.Model):
     primary_color = ColorField(default="#FFFFFF")
     secondary_color = ColorField(default="#FFFFFF")
     tertiary_color = ColorField(default="#FFFFFF")
+    team_instagram_url = models.URLField(max_length=100, default="#")
+    team_page_url = models.URLField(max_length=100, default="#")
+    team_twitter_url = models.URLField(max_length=100, default="#")
 
     def __str__(self):
         return self.name

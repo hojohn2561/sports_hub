@@ -1,7 +1,24 @@
+.link-icon {
+    margin-right: .5rem;
+}
+
 .team-banner-header {
     display: flex;
     flex-direction: row;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
+}
+
+.team-banner-link {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    width: fit-content;
+}
+
+.team-banner-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .team-banner-links a {

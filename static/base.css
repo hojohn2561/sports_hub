@@ -61,6 +61,7 @@ a:hover{
 .dropdown-content {
   display: flex;
   flex-direction: row;
+  margin: .5rem;
 }
 
 .dropdown-link-container {
@@ -68,6 +69,7 @@ a:hover{
   cursor: pointer;
   display: flex;
   height: 2rem;
+  padding:.5rem;
   justify-content: center;
 }
 
@@ -82,12 +84,11 @@ a:hover{
 
 .dropdown-links {
   display: flex;
-  flex-direction: column;
   flex: 0.15;
+  flex-direction: column;
 }
 
 .dropdown-teams {
-  padding: 0 0 0 2rem;
   flex: 0.85;
 }
 

@@ -7,7 +7,10 @@
             "name": "Browns",
             "primary_color": "#311D00",
             "secondary_color": "#FF3C00",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/clevelandbrowns/?hl=en",
+            "team_page_url": "https://www.clevelandbrowns.com",
+            "team_twitter_url": "https://twitter.com/Browns"
         },
         "model": "nfl.team",
         "pk": 1
@@ -20,7 +23,10 @@
             "name": "Ravens",
             "primary_color": "#241773",
             "secondary_color": "#000000",
-            "tertiary_color": "#9E7C0C"
+            "tertiary_color": "#9E7C0C",
+            "team_instagram_url": "https://www.instagram.com/ravens/?hl=en",
+            "team_page_url": "https://www.baltimoreravens.com",
+            "team_twitter_url": "https://twitter.com/Ravens"
         },
         "model": "nfl.team",
         "pk": 2
@@ -33,7 +39,10 @@
             "name": "Steelers",
             "primary_color": "#FFB612",
             "secondary_color": "#101820",
-            "tertiary_color": "#003087"
+            "tertiary_color": "#003087",
+            "team_instagram_url": "https://www.instagram.com/steelers/?hl=en",
+            "team_page_url": "https://www.steelers.com",
+            "team_twitter_url": "https://twitter.com/steelers"
         },
         "model": "nfl.team",
         "pk": 3
@@ -46,7 +55,10 @@
             "name": "Bengals",
             "primary_color": "#FB4F14",
             "secondary_color": "#000000",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/bengals/?hl=en",
+            "team_page_url": "https://www.bengals.com",
+            "team_twitter_url": "https://twitter.com/Bengals"
         },
         "model": "nfl.team",
         "pk": 4
@@ -59,7 +71,10 @@
             "name": "Chiefs",
             "primary_color": "#E31837",
             "secondary_color": "#FFB81C",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/chiefs/?hl=en",
+            "team_page_url": "https://www.chiefs.com",
+            "team_twitter_url": "https://twitter.com/Chiefs"
         },
         "model": "nfl.team",
         "pk": 5
@@ -72,7 +87,10 @@
             "name": "Raiders",
             "primary_color": "#000000",
             "secondary_color": "#A5ACAF",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/raiders/?hl=en",
+            "team_page_url": "https://www.raiders.com",
+            "team_twitter_url": "https://twitter.com/Raiders"
         },
         "model": "nfl.team",
         "pk": 6
@@ -85,7 +103,10 @@
             "name": "Chargers",
             "primary_color": "#002A5E",
             "secondary_color": "#FFC20E",
-            "tertiary_color": "#0080C6"
+            "tertiary_color": "#0080C6",
+            "team_instagram_url": "https://www.instagram.com/chargers/?hl=en",
+            "team_page_url": "https://www.chargers.com",
+            "team_twitter_url": "https://twitter.com/chargers"
         },
         "model": "nfl.team",
         "pk": 7
@@ -98,7 +119,10 @@
             "name": "Broncos",
             "primary_color": "#FB4F14",
             "secondary_color": "#002244",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/broncos/?hl=en",
+            "team_page_url": "https://www.denverbroncos.com",
+            "team_twitter_url": "https://twitter.com/Broncos"
         },
         "model": "nfl.team",
         "pk": 8
@@ -111,7 +135,10 @@
             "name": "Titans",
             "primary_color": "#0C2340",
             "secondary_color": "#4B92DB",
-            "tertiary_color": "#C8102E"
+            "tertiary_color": "#C8102E",
+            "team_instagram_url": "https://www.instagram.com/titans/?hl=en",
+            "team_page_url": "https://www.tennesseetitans.com",
+            "team_twitter_url": "https://twitter.com/Titans"
         },
         "model": "nfl.team",
         "pk": 9
@@ -124,7 +151,10 @@
             "name": "Colts",
             "primary_color": "#002C5F",
             "secondary_color": "#A2AAAD",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/colts/?hl=en",
+            "team_page_url": "https://www.colts.com",
+            "team_twitter_url": "https://twitter.com/Colts"
         },
         "model": "nfl.team",
         "pk": 10
@@ -137,7 +167,10 @@
             "name": "Jaguars",
             "primary_color": "#101820",
             "secondary_color": "#D7A22A",
-            "tertiary_color": "#006778"
+            "tertiary_color": "#006778",
+            "team_instagram_url": "https://www.instagram.com/jaguars/?hl=en",
+            "team_page_url": "https://www.jaguars.com",
+            "team_twitter_url": "https://twitter.com/Jaguars"
         },
         "model": "nfl.team",
         "pk": 11
@@ -150,7 +183,10 @@
             "name": "Texans",
             "primary_color": "#03202F",
             "secondary_color": "#A71930",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/houstontexans/?hl=en",
+            "team_page_url": "https://www.houstontexans.com",
+            "team_twitter_url": "https://twitter.com/HoustonTexans"
         },
         "model": "nfl.team",
         "pk": 12
@@ -163,7 +199,10 @@
             "name": "Patriots",
             "primary_color": "#002244",
             "secondary_color": "#C60C30",
-            "tertiary_color": "#B0B7BC"
+            "tertiary_color": "#B0B7BC",
+            "team_instagram_url": "https://www.instagram.com/patriots/?hl=en",
+            "team_page_url": "https://www.patriots.com",
+            "team_twitter_url": "https://twitter.com/Patriots"
         },
         "model": "nfl.team",
         "pk": 13
@@ -176,7 +215,10 @@
             "name": "Jets",
             "primary_color": "#125740",
             "secondary_color": "#000000",
-            "tertiary_color": "#FFF"
+            "tertiary_color": "#FFF",
+            "team_instagram_url": "https://www.instagram.com/nyjets/?hl=en",
+            "team_page_url": "https://www.newyorkjets.com",
+            "team_twitter_url": "https://twitter.com/nyjets"
         },
         "model": "nfl.team",
         "pk": 14
@@ -189,7 +231,10 @@
             "name": "Dolphins",
             "primary_color": "#008E97",
             "secondary_color": "#FC4C02",
-            "tertiary_color": "#005778"
+            "tertiary_color": "#005778",
+            "team_instagram_url": "https://www.instagram.com/miamidolphins/?hl=en",
+            "team_page_url": "https://www.miamidolphins.com",
+            "team_twitter_url": "https://twitter.com/MiamiDolphins"
         },
         "model": "nfl.team",
         "pk": 15
@@ -202,7 +247,10 @@
             "name": "Bills",
             "primary_color": "#00338D",
             "secondary_color": "#C60C30",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/buffalobills/?hl=en",
+            "team_page_url": "https://www.buffalobills.com",
+            "team_twitter_url": "https://twitter.com/BuffaloBills"
         },
         "model": "nfl.team",
         "pk": 16
@@ -215,7 +263,10 @@
             "name": "Giants",
             "primary_color": "#0B2265",
             "secondary_color": "#A71930",
-            "tertiary_color": "#A5ACAF"
+            "tertiary_color": "#A5ACAF",
+            "team_instagram_url": "https://www.instagram.com/nygiants/?hl=en",
+            "team_page_url": "https://www.giants.com",
+            "team_twitter_url": "https://twitter.com/Giants"
         },
         "model": "nfl.team",
         "pk": 17
@@ -228,7 +279,10 @@
             "name": "Cowboys",
             "primary_color": "#003594",
             "secondary_color": "#041E42",
-            "tertiary_color": "#869397"
+            "tertiary_color": "#869397",
+            "team_instagram_url": "https://www.instagram.com/dallascowboys/?hl=en",
+            "team_page_url": "https://www.dallascowboys.com",
+            "team_twitter_url": "https://twitter.com/dallascowboys"
         },
         "model": "nfl.team",
         "pk": 18
@@ -241,7 +295,10 @@
             "name": "Football Team",
             "primary_color": "#773141",
             "secondary_color": "#FFB612",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/washingtonnfl/?hl=en",
+            "team_page_url": "https://www.washingtonfootball.com",
+            "team_twitter_url": "https://twitter.com/WashingtonNFL"
         },
         "model": "nfl.team",
         "pk": 19
@@ -254,7 +311,10 @@
             "name": "Eagles",
             "primary_color": "#004C54",
             "secondary_color": "#A5ACAF",
-            "tertiary_color": "#ACC0C6"
+            "tertiary_color": "#ACC0C6",
+            "team_instagram_url": "https://www.instagram.com/philadelphiaeagles/?hl=en",
+            "team_page_url": "https://www.philadelphiaeagles.com",
+            "team_twitter_url": "https://twitter.com/Eagles"
         },
         "model": "nfl.team",
         "pk": 20
@@ -267,7 +327,10 @@
             "name": "49ers",
             "primary_color": "#AA0000",
             "secondary_color": "#B3995D",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/49ers/?hl=en",
+            "team_page_url": "https://www.49ers.com",
+            "team_twitter_url": "https://twitter.com/49ers"
         },
         "model": "nfl.team",
         "pk": 21
@@ -280,7 +343,10 @@
             "name": "Rams",
             "primary_color": "#003594",
             "secondary_color": "#FFA300",
-            "tertiary_color": "#FF8200"
+            "tertiary_color": "#FF8200",
+            "team_instagram_url": "https://www.instagram.com/rams/?hl=en",
+            "team_page_url": "https://www.therams.com",
+            "team_twitter_url": "https://twitter.com/RamsNFL"
         },
         "model": "nfl.team",
         "pk": 22
@@ -293,7 +359,10 @@
             "name": "Seahawks",
             "primary_color": "#002244",
             "secondary_color": "#69BE28",
-            "tertiary_color": "#A5ACAF"
+            "tertiary_color": "#A5ACAF",
+            "team_instagram_url": "https://www.instagram.com/seahawks/?hl=en",
+            "team_page_url": "https://www.seahawks.com",
+            "team_twitter_url": "https://twitter.com/Seahawks"
         },
         "model": "nfl.team",
         "pk": 23
@@ -306,7 +375,10 @@
             "name": "Cardinals",
             "primary_color": "#97233F",
             "secondary_color": "#000000",
-            "tertiary_color": "#FFB612"
+            "tertiary_color": "#FFB612",
+            "team_instagram_url": "https://instagram.com/azcardinals/?hl=en",
+            "team_page_url": "https://www.azcardinals.com",
+            "team_twitter_url": "https://twitter.com/AZCardinals"
         },
         "model": "nfl.team",
         "pk": 24
@@ -319,7 +391,10 @@
             "name": "Vikings",
             "primary_color": "#4F2683",
             "secondary_color": "#FFC62F",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/vikings/?hl=en",
+            "team_page_url": "https://www.vikings.com",
+            "team_twitter_url": "https://twitter.com/Vikings"
         },
         "model": "nfl.team",
         "pk": 25
@@ -332,7 +407,10 @@
             "name": "Packers",
             "primary_color": "#203731",
             "secondary_color": "#FFB612",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/packers/",
+            "team_page_url": "https://www.packers.com",
+            "team_twitter_url": "https://twitter.com/packers"
         },
         "model": "nfl.team",
         "pk": 26
@@ -345,7 +423,10 @@
             "name": "Bears",
             "primary_color": "#0B162A",
             "secondary_color": "#C83803",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/chicagobears/?hl=en",
+            "team_page_url": "https://www.chicagobears.com",
+            "team_twitter_url": "https://twitter.com/ChicagoBears"
         },
         "model": "nfl.team",
         "pk": 27
@@ -358,7 +439,10 @@
             "name": "Lions",
             "primary_color": "#0076B6",
             "secondary_color": "#B0B7BC",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/detroitlionsnfl/?hl=en",
+            "team_page_url": "https://www.detroitlions.com",
+            "team_twitter_url": "https://twitter.com/Lions"
         },
         "model": "nfl.team",
         "pk": 28
@@ -371,7 +455,10 @@
             "name": "Buccaneers",
             "primary_color": "#D50A0A",
             "secondary_color": "#FF7900",
-            "tertiary_color": "#0A0A08"
+            "tertiary_color": "#0A0A08",
+            "team_instagram_url": "https://www.instagram.com/buccaneers/?hl=en",
+            "team_page_url": "https://www.buccaneers.com",
+            "team_twitter_url": "https://twitter.com/Buccaneers"
         },
         "model": "nfl.team",
         "pk": 29
@@ -384,7 +471,10 @@
             "name": "Falcons",
             "primary_color": "#A71930",
             "secondary_color": "#000000",
-            "tertiary_color": "#A5ACAF"
+            "tertiary_color": "#A5ACAF",
+            "team_instagram_url": "https://www.instagram.com/atlantafalcons/?hl=en",
+            "team_page_url": "https://www.atlantafalcons.com",
+            "team_twitter_url": "https://twitter.com/AtlantaFalcons"
         },
         "model": "nfl.team",
         "pk": 30
@@ -397,7 +487,10 @@
             "name": "Saints",
             "primary_color": "#D3BC8D",
             "secondary_color": "#101820",
-            "tertiary_color": "#FFFFFF"
+            "tertiary_color": "#FFFFFF",
+            "team_instagram_url": "https://www.instagram.com/saints/?hl=en",
+            "team_page_url": "https://www.neworleanssaints.com",
+            "team_twitter_url": "https://twitter.com/Saints"
         },
         "model": "nfl.team",
         "pk": 31
@@ -410,7 +503,10 @@
             "name": "Panthers",
             "primary_color": "#0085CA",
             "secondary_color": "#101820",
-            "tertiary_color": "#BFC0BF"
+            "tertiary_color": "#BFC0BF",
+            "team_instagram_url": "https://www.instagram.com/panthers/?hl=en",
+            "team_page_url": "https://www.panthers.com",
+            "team_twitter_url": "https://twitter.com/Panthers"
         },
         "model": "nfl.team",
         "pk": 32
