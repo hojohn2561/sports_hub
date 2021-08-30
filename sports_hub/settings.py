@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "colorfield",
+    'crispy_forms',
+    "crispy_bootstrap5",
     'nfl.apps.NflConfig'
 ]
 
@@ -142,3 +144,7 @@ STATICFILES_DIRS = [
     # By default, Django doesn't check for static files in root, so add path to make it check in root
     os.path.join(BASE_DIR, 'static'),
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"

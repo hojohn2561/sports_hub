@@ -15,6 +15,36 @@ from .forms import ScheduleForm
 # request data and choose what actions it should take and which response it should send back
 # (even though that specific view doesn't make use of it).
 
+# Parse year and week (hofw, pw1, w1, wc, etc.) into correct format for url
+def get_schedule_url(year, week):
+    # If preseason week
+    if ("pw" in week):
+        # Preseason week 1 for espn starts with HOFW
+        week_num = int(week.split("pw")[1]) + 1
+        print(week_num)
+        return "https://www.espn.com/nfl/schedule/_/week/" + \
+            str(week_num) + "/year/" + year + "/seasontype/1"
+    # If hall of fame weekend
+    elif ("hofw" in week):
+        return "https://www.espn.com/nfl/schedule/_/week/1/year/" + year + "/seasontype/1"
+    # If wild card weekend
+    elif ("wc" in week):
+        return "https://www.espn.com/nfl/schedule/_/week/1/year/" + year + "/seasontype/3"
+    # ================= Have yet to handle years with no week 18 =================
+    elif ("w" in week):
+        week_num = int(week.split("w")[1])
+        print(week_num)
+        return "https://www.espn.com/nfl/schedule/_/week/" + \
+            str(week_num) + "/year/" + year + "/seasontype/2"
+    elif ("dr" in week):
+        return "https://www.espn.com/nfl/schedule/_/week/2/year/" + year + "/seasontype/3"
+    elif ("cc" in week):
+        return "https://www.espn.com/nfl/schedule/_/week/3/year/" + year + "/seasontype/3"
+    elif ("pb" in week):
+        return "https://www.espn.com/nfl/schedule/_/week/4/year/" + year + "/seasontype/3"
+    elif ("sb" in week):
+        return "https://www.espn.com/nfl/schedule/_/week/5/year/" + year + "/seasontype/3"
+
 
 def index(request):
     return render(request, 'nfl/index.html')
@@ -33,46 +63,14 @@ def schedule(request):
         if form.is_valid():
             year = form.cleaned_data["year"]
             week = form.cleaned_data["week"]
-    print("Get schedule data", year, week)
 
-    # Parse year and week (hofw, pw1, w1, wc, etc.) into correct format for url
-    url = ""
-    # If preseason week
-    if ("pw" in week):
-        # Preseason week 1 for espn starts with HOFW
-        week_num = int(week.split("pw")[1]) + 1
-        print(week_num)
-        url = "https://www.espn.com/nfl/schedule/_/week/" + \
-            str(week_num) + "/year/" + year + "/seasontype/1"
-    # If hall of fame weekend
-    elif ("hofw" in week):
-        url = "https://www.espn.com/nfl/schedule/_/week/1/year/" + year + "/seasontype/1"
-    # If wild card weekend
-    elif ("wc" in week):
-        url = "https://www.espn.com/nfl/schedule/_/week/1/year/" + year + "/seasontype/3"
-    # ================= Have yet to handle years with no week 18 =================
-    elif ("w" in week):
-        week_num = int(week.split("w")[1])
-        print(week_num)
-        url = "https://www.espn.com/nfl/schedule/_/week/" + \
-            str(week_num) + "/year/" + year + "/seasontype/2"
-    elif ("dr" in week):
-        url = "https://www.espn.com/nfl/schedule/_/week/2/year/" + year + "/seasontype/3"
-    elif ("cc" in week):
-        url = "https://www.espn.com/nfl/schedule/_/week/3/year/" + year + "/seasontype/3"
-    elif ("pb" in week):
-        url = "https://www.espn.com/nfl/schedule/_/week/4/year/" + year + "/seasontype/3"
-    elif ("sb" in week):
-        url = "https://www.espn.com/nfl/schedule/_/week/5/year/" + year + "/seasontype/3"
-
+    url = get_schedule_url(year, week)
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
     # On the html page, game days are located in the divs with the class "table-caption"
     game_day_html_tags = soup.select(".table-caption")
     game_days = [day.getText() for day in game_day_html_tags]
-    print(game_days)
-
     games_data = {game_day: [] for game_day in game_days}
 
     # On the html page, tables containing the day's matchups are located in the divs with the class "responsive-table-wrap"
@@ -97,7 +95,7 @@ def schedule(request):
     # print(json.dumps(games_data, indent=4))
 
     # Initialize the form with initial values.
-    # Upon submission, page will reload, which will cause form to reset. Setting to initial values to be submitted form values so it updates, and doesn't reset to default
+    # Upon submission, page will reload, which will cause form to reset. Setting to initial values to be submitted form values so it updates, and doesn't reset to default.
     return render(request, "nfl/schedule.html", {'schedule_form': ScheduleForm(initial={'year': year, 'week': week}), 'games_data': games_data})
 
 
