@@ -5,13 +5,17 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 class ScheduleForm(forms.Form):
     year = forms.ChoiceField(
+        label="",
         choices=[
             ("2021", "2021"),
             ("2020", "2020"),
             ("2019", "2019")
-        ]
+        ],
+        widget=forms.Select(attrs={'onchange': 'form.submit();'})
     )
+
     week = forms.ChoiceField(
+        label="",
         choices=[
             ("hofw", "Hall of Fame Weekend"),
             ("pw1", "Preseason Week 1"),
@@ -41,5 +45,6 @@ class ScheduleForm(forms.Form):
             ("cc", "Conference Championship"),
             ("pb", "Pro Bowl"),
             ("sb", "Super Bowl")
-        ]
+        ],
+        widget=forms.Select(attrs={'onchange': 'form.submit();'})
     )

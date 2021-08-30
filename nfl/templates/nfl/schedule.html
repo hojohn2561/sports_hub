@@ -6,6 +6,7 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'nfl/schedule.css' %}" />
 
+
 <h1>NFL Schedule page</h1>
 {% comment %} <select class="form-select" aria-label="Default select example">
   <option selected>2021</option>
@@ -16,7 +17,6 @@
 
 <form method="get" id="schedule-options">
     {{schedule_form|crispy}}
-    <button type="submit">Submit</button>
 </form>
 
 

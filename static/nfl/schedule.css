@@ -1,7 +1,3 @@
-#schedule-options {
-    margin-bottom: 2.5rem;
-}
-
 .game-container {
     background-color: orchid;
     height: 10rem;
@@ -13,4 +9,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+#schedule-options {
+    display: flex;
+    flex-direction: row;    
+    margin-bottom: 2.5rem;
 }
