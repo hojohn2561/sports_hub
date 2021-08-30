@@ -1,0 +1,16 @@
+#schedule-options {
+    margin-bottom: 2.5rem;
+}
+
+.game-container {
+    background-color: orchid;
+    height: 10rem;
+    margin: .25rem;
+    width: 46%;
+    
+}
+.games-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

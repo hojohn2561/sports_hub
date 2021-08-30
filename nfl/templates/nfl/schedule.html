@@ -1,7 +1,38 @@
 {% extends 'base.html' %} 
+{% load static %}
+
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'nfl/schedule.css' %}" />
 
 <h1>NFL Schedule page</h1>
+{% comment %} <select class="form-select" aria-label="Default select example">
+  <option selected>2021</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select> {% endcomment %}
+
+<form method="get" id="schedule-options">
+    {{schedule_form}}
+    <button type="submit">Submit</button>
+</form>
+
+
+
+{% comment %} https://stackoverflow.com/questions/5231171/django-templatesyntaxerror-could-not-parse-the-remainder {% endcomment %}
+{% for date, games in games_data.items %}
+    <div class="game-day-container">
+        <h2>{{date}}</h2>
+        <div class="games-container">
+            {% for game in games %}
+                <div class="game-container">
+                    {{game.away_team}} @ {{game.home_team}}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+
 
 {% endblock %}

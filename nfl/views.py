@@ -1,8 +1,11 @@
 import requests
+import json
 from bs4 import BeautifulSoup
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from .models import Team
+from .forms import ScheduleForm
+
 
 # A view function is a Python function that takes in an Http request and returns a Http response.
 # This response can be the HTML contents of a Web page, or a redirect, or a 404 error, or an XML
@@ -22,8 +25,47 @@ def teams(request):
 
 
 def schedule(request):
-    response = requests.get(
-        "https://www.espn.com/nfl/schedule/_/week/1/year/2021/seasontype/2")
+    year = "2021"
+    week = "w1"
+
+    if request.method == 'GET':
+        form = ScheduleForm(request.GET)
+        if form.is_valid():
+            year = form.cleaned_data["year"]
+            week = form.cleaned_data["week"]
+    print("Get schedule data", year, week)
+
+    # Parse year and week (hofw, pw1, w1, wc, etc.) into correct format for url
+    url = ""
+    # If preseason week
+    if ("pw" in week):
+        # Preseason week 1 for espn starts with HOFW
+        week_num = int(week.split("pw")[1]) + 1
+        print(week_num)
+        url = "https://www.espn.com/nfl/schedule/_/week/" + \
+            str(week_num) + "/year/" + year + "/seasontype/1"
+    # If hall of fame weekend
+    elif ("hofw" in week):
+        url = "https://www.espn.com/nfl/schedule/_/week/1/year/" + year + "/seasontype/1"
+    # If wild card weekend
+    elif ("wc" in week):
+        url = "https://www.espn.com/nfl/schedule/_/week/1/year/" + year + "/seasontype/3"
+    # ================= Have yet to handle years with no week 18 =================
+    elif ("w" in week):
+        week_num = int(week.split("w")[1])
+        print(week_num)
+        url = "https://www.espn.com/nfl/schedule/_/week/" + \
+            str(week_num) + "/year/" + year + "/seasontype/2"
+    elif ("dr" in week):
+        url = "https://www.espn.com/nfl/schedule/_/week/2/year/" + year + "/seasontype/3"
+    elif ("cc" in week):
+        url = "https://www.espn.com/nfl/schedule/_/week/3/year/" + year + "/seasontype/3"
+    elif ("pb" in week):
+        url = "https://www.espn.com/nfl/schedule/_/week/4/year/" + year + "/seasontype/3"
+    elif ("sb" in week):
+        url = "https://www.espn.com/nfl/schedule/_/week/5/year/" + year + "/seasontype/3"
+
+    response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
     # On the html page, game days are located in the divs with the class "table-caption"
@@ -31,9 +73,11 @@ def schedule(request):
     game_days = [day.getText() for day in game_day_html_tags]
     print(game_days)
 
+    games_data = {game_day: [] for game_day in game_days}
+
     # On the html page, tables containing the day's matchups are located in the divs with the class "responsive-table-wrap"
     game_table_containers = soup.select(".responsive-table-wrap")
-    for game_table_container in game_table_containers:
+    for index, game_table_container in enumerate(game_table_containers):
         game_tables = game_table_container.select("tbody")
 
         # Multiple game tables because multiple days where games are played
@@ -47,9 +91,14 @@ def schedule(request):
                 home_team_full_name, away_team_full_name = map(
                     lambda team_abbr_tag: team_abbr_tag.attrs["title"], game.findAll("abbr"))
 
-                print(away_team_full_name, "at", home_team_full_name)
+                games_data[game_days[index]].append({
+                    'home_team': home_team_full_name, 'away_team': away_team_full_name})
 
-    return render(request, "nfl/schedule.html")
+    # print(json.dumps(games_data, indent=4))
+
+    # Initialize the form with initial values.
+    # Upon submission, page will reload, which will cause form to reset. Setting to initial values to be submitted form values so it updates, and doesn't reset to default
+    return render(request, "nfl/schedule.html", {'schedule_form': ScheduleForm(initial={'year': year, 'week': week}), 'games_data': games_data})
 
 
 def standings(request):
